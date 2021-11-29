@@ -14,5 +14,67 @@ ifdef::backend-html5[]
 // print the toc here (not at the default position)
 //toc::[]
 
-== Comming Soon
+== Konzeptionelle Datenmodelle
 
+=== Was ist ein DB-System
+
+4 Komponenten
+
+* Daten
+* Hardware
+* Software
+* Benutzer
+
+=== Unterschied Dateisystem _DS_ / Datenbanksystem _DBS_
+
+//Abb2.
+Sehr schlechte Lösung - viele Nachteile
+
+* Redundanz (Gleiche Daten in mehreren Dateien)
+* Bei jedem Programmablauf ist immer der gesamte Datei-Inhalt zu durchsuchen.
+* Keine Schutzmaßnahmen
+* Allgemeine Routinen müssen in jeder Programmiersprache kodiert werden.
+* Änderungen der Dateien haben Auswirkungen auf die Programme.
+* Keine Zentrale Kontrolle
+
+=== Datenbank
+
+* DBMS (Software z.B.: ORACLE)
+* Datenbasis
+
+//Abb3
+
+=== 3-Schema-Konzept
+
+damit versucht man eine DB in möglichst unabhängige einfach zu wartende Teile zu zerlegen
+
+//Abb5
+
+|===
+|AP |Anwendungsprogramm
+|ES |Externes-Schema
+|IS |Internes-Schema
+|KS |Konzeptionelles-Schema
+|===
+
+==== Konzeptionelle Schema
+
+logische Gesamtstruktur der Daten, ihrer Eigenschaften und Beziehungen
+
+Bsp Mitarbeiter (MitarbeiterNr, Telefonnummer, SozVers, Beziehung, ...)
+====
+*SozVers* ... 10-stellig, Nummer, geb. Datum ist eingebettet
+*Beziehung* ... Mitarbeiter ist Untergebener von ...
+====
+
+==== Internes Schema
+
+Werden alle implementierungsabhängigen Eigenschaften Definiert
+
+z.B.: Speicherart, Zeichensatz, Zugriffspfade, ...
+
+==== Externes Schema
+
+Für die AP _Anwendungsprogramme_ wird nur ein kleiner Ausschnitt zur verfügung gestellt (Nachnahmen und Gehalt) -> nicht aber das Gehalt
+
+== Comming Soon
