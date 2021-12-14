@@ -25,6 +25,18 @@ ifdef::backend-html5[]
 * Software
 * Benutzer
 
+[plantuml,Abb2,png]
+-----
+@startuml
+left to right direction
+
+A -- D1
+B -- D2
+C -- D3
+
+@enduml
+-----
+
 === Unterschied Dateisystem _DS_ / Datenbanksystem _DBS_
 
 //Abb2.
