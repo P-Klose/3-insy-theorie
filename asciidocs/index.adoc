@@ -74,6 +74,23 @@ Sehr schlechte Lösung - viele Nachteile
 * Datenbasis
 
 //Abb3
+[plantuml,Abb2,png]
+-----
+@startuml
+left to right direction
+
+package AnwPgm (batch){}
+package AnwPgm (online){}
+package Datenbank{
+package DMBS{}
+package Datenbasis{}
+}
+AnwPgm (batch) ..> Datenbank
+AnwPgm (online) ..> Datenbank
+
+
+@enduml
+-----
 
 === 3-Schema-Konzept
 
