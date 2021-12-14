@@ -74,21 +74,18 @@ Sehr schlechte Lösung - viele Nachteile
 * Datenbasis
 
 //Abb3
-[plantuml,Abb2,png]
+[plantuml,Abb3,png]
 -----
 @startuml
 left to right direction
-
-package AnwPgm (batch){}
-package AnwPgm (online){}
+package "AnwPgm online"{}
+package "AnwPgm offline"{}
 package Datenbank{
 package DMBS{}
 package Datenbasis{}
 }
-AnwPgm (batch) ..> Datenbank
-AnwPgm (online) ..> Datenbank
-
-
+"AnwPgm online" ..> Datenbank
+"AnwPgm offline" ..> Datenbank
 @enduml
 -----
 
