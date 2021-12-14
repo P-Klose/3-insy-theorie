@@ -25,21 +25,40 @@ ifdef::backend-html5[]
 * Software
 * Benutzer
 
+
+=== Unterschied Dateisystem _DS_ / Datenbanksystem _DBS_
+
 [plantuml,Abb2,png]
 -----
 @startuml
 left to right direction
 
-A -- D1
-B -- D2
-C -- D3
+agent A
+agent B
+agent C
+agent D1
+agent D2
+agent D3
+
+A ---- D1
+C ---- D3
+B ---- D2
+
+
+
+note right of D1
+Angestellte Date
+end note
+note right of D2
+Projekt Datei
+end note
+note right of D3
+Angest. - Projekt Datei
+end note
 
 @enduml
 -----
 
-=== Unterschied Dateisystem _DS_ / Datenbanksystem _DBS_
-
-//Abb2.
 Sehr schlechte Lösung - viele Nachteile
 
 * Redundanz (Gleiche Daten in mehreren Dateien)
